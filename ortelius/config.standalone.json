@@ -1,12 +1,12 @@
 {
-  "networkID": 5,
+  "networkID": 12345,
   "logDirectory": "/var/log/ortelius",
   "listenAddr": ":8080",
   "features": [
   ],
-  "avalanchego": "http://host.docker.internal:9661",
+  "avalanchego": "http://host.docker.internal:9665",
   "nodeInstance": "default",
-  "cchainId": "yH8D7ThNJkxmtkuv2jgBa4P1Rn3Qpr4pPr7QYNfcdoS6k6HWp",
+  "cchainId": "2CA6j5zYzasynPsFeNoqWkmTCt3VScMvXUZHbfDJ8k3oGzAPtU",
   "chains": {
     "11111111111111111111111111111111LpoYY": {
       "id": "11111111111111111111111111111111LpoYY",
