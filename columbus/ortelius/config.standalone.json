@@ -19,7 +19,7 @@
   },
   "services": {
     "db": {
-      "dsn": "root:password@tcp(host.docker.internal:3306)/ortelius",
+      "dsn": "root:password@tcp(172.17.0.1:3306)/ortelius",
       "driver": "mysql"
     }
   }
