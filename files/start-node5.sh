@@ -1,7 +1,3 @@
-#!/bin/bash
-# (c) 2021, Ava Labs, Inc. All rights reserved.
-# See the file LICENSE for licensing terms.
-
 set -e
 sleep 20
 node1=$(getent hosts node-1 | awk '{ print $1 }')

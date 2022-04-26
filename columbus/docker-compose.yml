@@ -6,15 +6,13 @@ volumes:
     name: ipcs
   mysql-data:
     name: mysql-data
-  files:
 services:
-  node-1:
-    container_name: node-1
+  index-node:
+    container_name: index-node
     image: c4tplatform/caminogo:v0.1.0
-    command: [/files/start-node1.sh]
+    command: [/files/start-node.sh]
     ports:
         - '9661:9650'
-        - '9671:9651'
     networks:
         - camino
     volumes:
@@ -22,58 +20,6 @@ services:
         - ipcs:/tmp
     depends_on:
         - indexer
-  node-2:
-    container_name: node-2
-    image: c4tplatform/caminogo:v0.1.0
-    command: ["/files/start-node2.sh"]
-    ports:
-        - '9662:9650'
-        - '9672:9651'
-    networks:
-        - camino
-    volumes:
-        - ./files:/files    
-    depends_on: 
-        - node-1
-  node-3:
-    container_name: node-3
-    image: c4tplatform/caminogo:v0.1.0
-    command: ["/files/start-node3.sh"]
-    ports:
-        - "9663:9650"
-        - '9673:9651'
-    networks:
-        - camino
-    volumes:
-        - ./files:/files 
-    depends_on: 
-        - node-2
-  node-4:
-    container_name: node-4
-    image: c4tplatform/caminogo:v0.1.0
-    command: ["/files/start-node4.sh"]
-    ports:
-        - "9664:9650"
-        - '9674:9651'
-    networks:
-        - camino
-    volumes:
-        - ./files:/files 
-    depends_on: 
-        - node-3  
-  node-5:
-    container_name: node-5
-    image: c4tplatform/caminogo:v0.1.0
-    command: ["/files/start-node5.sh"]
-    ports:
-        - "9665:9650"
-        - '9675:9651'
-    networks:
-        - camino    
-    volumes:
-        - ./files:/files    
-    depends_on: 
-        - node-4   
   indexer: &ortelius-app
     image: "avaplatform/ortelius:v1.7.10"
     command: ["stream", "indexer", "-c", "/opt/config.json"]
@@ -94,7 +40,7 @@ services:
     image: "mysql:8.0.26"
     volumes:
       - mysql-data:/var/lib/mysql
-      - ./mysql/my.cnf:/etc/mysql/my.cnf
+      - ./sql/my.cnf:/etc/mysql/my.cnf
     ports:
       - "3306:3306"
     environment:
