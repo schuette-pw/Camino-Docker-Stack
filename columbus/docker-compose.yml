@@ -24,7 +24,7 @@ services:
       limits:
         memory: 1G
   indexer: &ortelius-app
-    image: "avaplatform/ortelius:v1.7.10"
+    image: "c4tplatform/magellan:v0.0.0"
     command: ["stream", "indexer", "-c", "/opt/config.json"]
     networks:
       - camino
@@ -56,6 +56,8 @@ services:
     resources:
       limits:
         memory: 1G
+    cap_sadd:
+      - SYS_NICE
   migrate:
     image: "migrate/migrate:v4.14.1"
     volumes:

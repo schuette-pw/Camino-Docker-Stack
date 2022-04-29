@@ -4,7 +4,7 @@
   "listenAddr": ":8080",
   "features": [
   ],
-  "avalanchego": "http://host.docker.internal:9665",
+  "caminogo": "http://host.docker.internal:9665",
   "nodeInstance": "default",
   "cchainId": "2CA6j5zYzasynPsFeNoqWkmTCt3VScMvXUZHbfDJ8k3oGzAPtU",
   "chains": {
@@ -12,8 +12,8 @@
       "id": "11111111111111111111111111111111LpoYY",
       "vmType": "pvm"
     },
-    "2JVSBoinj9C2J33VntvzYtVJNZdN2NKiwwKjcumHUWEb5DbBrm": {
-      "id": "2JVSBoinj9C2J33VntvzYtVJNZdN2NKiwwKjcumHUWEb5DbBrm",
+    "2eNy1mUFdmaxXNj1eQHUe7Np4gju9sJsEtWQ4MX3ToiNKuADed": {
+      "id": "2eNy1mUFdmaxXNj1eQHUe7Np4gju9sJsEtWQ4MX3ToiNKuADed",
       "vmType": "avm"
     }
   },
