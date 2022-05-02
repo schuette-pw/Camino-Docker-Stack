@@ -74,9 +74,9 @@ services:
         - ./files:/files    
     depends_on: 
         - node-4   
-  indexer: &ortelius-app
-    image: "avaplatform/ortelius:v1.7.10"
-    command: ["stream", "indexer", "-c", "/opt/config.json"]
+  indexer-api:
+    image: "c4tplatform/magellan:v0.0.1"
+    command: ["stream", "indexer", "api", "-c", "/opt/config.json"]
     networks:
       - camino
     volumes:
@@ -85,9 +85,6 @@ services:
     restart: on-failure
     depends_on:
       - mysql
-  api:
-    <<: *ortelius-app
-    command: ["api", "-c", "/opt/config.json"]
     ports:
       - 8080:8080
   mysql:

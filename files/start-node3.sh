@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 sleep 10
 node1=$(getent hosts node-1 | awk '{ print $1 }')
