@@ -19,7 +19,7 @@ services:
         - ./files:/files
         - ipcs:/tmp
     depends_on:
-        - indexer
+        - indexer-api
     deploy:
       resources:
         limits:
