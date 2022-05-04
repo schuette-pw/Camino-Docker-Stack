@@ -71,7 +71,7 @@ services:
     networks:
         - camino    
     volumes:
-        - ./files:/files    
+        - ./files:/files
     depends_on: 
         - node-4   
   indexer-api:
