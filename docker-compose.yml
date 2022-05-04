@@ -75,7 +75,7 @@ services:
     depends_on: 
         - node-4   
   indexer-api:
-    image: "c4tplatform/magellan:v0.0.1"
+    image: "c4tplatform/magellan:v0.0.2"
     command: ["stream", "indexer", "api", "-c", "/opt/config.json"]
     networks:
       - camino
