@@ -25,7 +25,7 @@ services:
         limits:
           memory: 1G
   indexer-api: &ortelius-app
-    image: "c4tplatform/magellan:v0.0.2"
+    image: "c4tplatform/magellan:v0.0.3"
     command: ["stream", "indexer", "api", "-c", "/opt/config.json"]
     networks:
       - camino
