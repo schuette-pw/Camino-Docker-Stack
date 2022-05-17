@@ -4,7 +4,7 @@
   "listenAddr": ":8080",
   "features": [
   ],
-  "caminogo": "http://172.17.0.1:59650",
+  "caminonode": "http://172.17.0.1:59650",
   "nodeInstance": "default",
   "chains": {
     "G52TJLLbDSxYXsijNMpKFB6kAyDVRd9DGWVWYBh86Z8sEXm1i": {

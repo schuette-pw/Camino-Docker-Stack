@@ -6,7 +6,7 @@ volumes:
     name: mysql-data
 services:
   indexer-api: &ortelius-app
-    image: "c4tplatform/magellan:v0.0.3"
+    image: "c4tplatform/magellan:v0.1.1"
     command: ["stream", "indexer", "api", "-c", "/opt/config.json"]
     networks:
       - camino
